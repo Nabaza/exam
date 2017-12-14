@@ -14,9 +14,7 @@ $dbname = "explorecalifornia";
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$select = "SELECT tourName, description, price, keywords, packageDescription, packageGraphic  from tours
-  LEFT JOIN packages ON tours.packageId = packages.packageId
-LEFT JOIN packages ON tours.packageId = packages.packageId";
+$select = "SELECT tourName, price, keywords from tours";
 
 $result = $conn->prepare($select);
 $result->execute();

@@ -22,8 +22,7 @@ $dbname = "explorecalifornia";
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$select = "SELECT tourName, description, price, keywords, packageDescription, packageGraphic from tours LEFT JOIN packages ON tours.packageId = packages.packageId
-LEFT JOIN packages ON tours.packageId = packages.packageId";
+$select = "SELECT tourName, description, price, keywords from tours";
 
 $result = $conn->prepare($select);
 $result->execute();
@@ -42,7 +41,7 @@ $result = $result->fetchAll(PDO::FETCH_ASSOC);
     <script src="sortable.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
-<h1>virker det?</h1>
+
 <body>
 
 <table class="table sortable" id="tours">
@@ -54,8 +53,6 @@ $result = $result->fetchAll(PDO::FETCH_ASSOC);
         <th>Pris</th>
         <th>Keywords</th>
         <th>Kort</th>
-        <th>Data</th>
-        <th>Billeder</th>
     </tr>
     </thead>
     <tbody>
@@ -67,8 +64,6 @@ $result = $result->fetchAll(PDO::FETCH_ASSOC);
             <td><?= $row['price'] ?></td>
             <td><?= $row['keywords'] ?></td>
             <td><?= $row['graphic'] ?></td>
-            <td><?= $row['packageDescription'] ?></td>
-            <td><?= $row['packageGraphic'] ?></td>
         </tr>
 
     <?php endforeach; ?>

@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Exam example",
-  "description": "Denne extension viser et udkast af en tabel",
+  "description": "Denne extension viser tur tabel",
   "version": "1.0",
 
   "browser_action": {

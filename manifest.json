@@ -6,7 +6,7 @@
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "unnamed.png",
+    "default_icon": "plane.png",
     "homepage_url": "http://localhost/exam/explore_california_api.php"
   },
   "chrome_url_overrides":{

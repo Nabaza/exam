@@ -1,0 +1,7 @@
+Beskriv 2 metoder der kan forhindre et SQL-injection angreb
+
+1: Prepared statements (Parameterized query)
+    Bruger inputtet som parameter
+
+2: Stored Procedures
+    Som ikke altid er sikkert overfor SQL injections. Forskellen er at denne bliver defineret og gemt i selve databasen hvorimod prepared statements er i inputtet.

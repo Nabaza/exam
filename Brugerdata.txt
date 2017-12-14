@@ -1,0 +1,7 @@
+Hvordan kan man sikre afsløring af brugerdata ved SQL-injection angreb
+
+Hashing - Er en kryptering der kryptere først og så ligger det krypteret ned i databasen, måske får hackeren adgang til
+databasen men vil så kun se det krypterede password og der er ikke mulighed for at dekryptere der er dog nogen som har
+arbejdet på rainbowtables som kan dekryptere nogle hashing.
+
+Salting - tilføjer en streng til passwordet som salt til et æg (password+salt)
